@@ -1,0 +1,215 @@
+:root {
+    /* Colors */
+    --color-black: #011222;
+    --color-white: #fbfcf8;
+    --color-hover: #484f56;
+
+    /* Font Sizes */
+    --font-size-navbar: 1.5rem;
+    --font-size-h1: 4rem;
+    --font-size-h2: 3rem;
+    --font-size-h3: 2rem;
+    --font-size-p: 1rem;
+
+    /* Font Weights */
+    --font-weight-navbar: 700;
+    --font-weight-h1: 900;
+    --font-weight-h2: 800;
+    --font-weight-h3: 600;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Barlow', Arial, Helvetica, sans-serif;
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+.navbar a {
+    font-size: var(--font-size-navbar);
+    font-weight: var(--font-weight-navbar);
+}
+h1 {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-h1);
+}
+h2 {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-h2);
+}
+h3 {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-h3);
+}
+p {
+    font-size: var(--font-size-p);
+}
+.contact-text {
+    font-size: var(--font-size-contact-text);
+}
+.copyright {
+    font-size: var(--font-size-copyright);
+}
+
+/* Navbar */
+header .navbar {
+    z-index: 999;
+}
+.navbar-expand-lg {
+    padding: 0;
+}
+.container-fluid {
+    background-color: var(--color-white);
+}
+.navbar-nav {
+    width: 100%;
+}
+.nav-link {
+    color: var(--color-black);
+    transition: 0.3s ease-in;
+}
+.nav-link:hover {
+    color: var(--color-hover);
+}
+/* Image display */
+#work {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#carouselExampleIndicators {
+    position: relative;
+    width: min(100% - 48px);
+    margin: 0 auto;
+}
+
+.carousel-inner img {
+    height: 762px;
+    object-fit: cover;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -148px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.carousel-indicators .thumbnail {
+    flex: 1;
+    max-width: calc(100% / 6 - 24px);
+    height: 110px;
+    margin-right: 24px;
+}
+.carousel-indicators .thumbnail:last-child {
+    margin-right: 0;
+}
+.carousel-indicators .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel-indicators .thumbnail {
+    margin-right: 24px;
+}
+.carousel-caption {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.carousel-caption h1 {
+    color: var(--color-white);
+}
+.carousel-caption img.logo-hero {
+    width: 360px;
+    height: 125.25px;
+    object-fit: cover;
+}
+.carousel-indicators button.thumbnail:not(.active) {
+    filter: grayscale(100%);
+}
+
+/* About */
+.box img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    align-self: flex-end;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.text-about {
+    width: 100%;
+    text-align: justify;
+    line-height: 24px;
+    letter-spacing: 0.3%;
+    font-size: 16px;
+    font-weight: 400;
+}
+/* Blog */
+.text-justify {
+    text-align: justify;
+    line-height: 24px;
+}
+img.image-blog {
+    width: 100%;
+    height: 312.43px;
+    object-fit: cover;
+}
+/* contact */
+.icon-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.125em;
+    height: 6.125em;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-black);
+    transition: 0.3s ease-in;
+}
+.icon-wrapper:hover {
+    color: var(--color-hover);
+}
+.icon-wrapper i {
+    font-size: 2rem;
+}
+/* Responsive adjustment */
+@media (max-width: 575px) {
+    :root {
+        --font-size-navbar: 1.25rem;
+        --font-size-h1: 3rem;
+        --font-size-h2: 2.25rem;
+        --font-size-h3: 1.75rem;
+        --font-size-p: 0.875rem;
+
+        --font-weight-navbar: 600;
+        --font-weight-h1: 800;
+        --font-weight-h2: 700;
+        --font-weight-h3: 500;
+    }
+    /* Work */
+    .carousel-indicators {
+        display: none;
+        height: 100vh;
+    }
+    .carousel-caption img.logo-hero {
+        width: 5.625em;
+        height: 1.975em;
+        object-fit: cover;
+    }
+    /* About */
+    /* .row {
+        grid-template-columns: 1fr;
+    } */
+}
